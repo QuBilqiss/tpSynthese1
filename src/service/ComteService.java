@@ -98,10 +98,9 @@ public class ComteService extends AbstractFacade<Compte> {
         Compte compte=find(rib);
         if(compte==null) return -1;
         else if(compte.getSolde()!=0) return -2;
-        else {
+       
             remove(compte);
-        }
-        
+            return 1;
     }
     
 }
